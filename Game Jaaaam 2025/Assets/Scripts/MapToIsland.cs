@@ -95,7 +95,8 @@ public class MapToIsland : MonoBehaviour
 
         while (elapsedTime < totalDuration)
         {
-            elapsedTime += 1f; // Increment by the duration of ZoomCameraCoroutine
+            elapsedTime += 60*Time.deltaTime;
+            Debug.Log(elapsedTime);
             yield return StartCoroutine(ZoomCameraCoroutine());
         }        
 
