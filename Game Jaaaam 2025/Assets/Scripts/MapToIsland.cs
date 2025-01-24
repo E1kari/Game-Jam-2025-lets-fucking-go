@@ -12,6 +12,9 @@ public class MapToIsland : MonoBehaviour
     private new Camera camera;
     PlayerInput playerInput;
 
+    private float elapsedTime = 0f;
+    private float totalDuration = 1f;
+
     public bool isTouchingIsland = false;
 
     private void Start()
@@ -90,12 +93,9 @@ public class MapToIsland : MonoBehaviour
 
     private IEnumerator ZoomCameraLoopCoroutine()
     {
-        float totalDuration = 1f; // Total duration in seconds
-        float elapsedTime = 0f;
-
         while (elapsedTime < totalDuration)
         {
-            elapsedTime += 60*Time.deltaTime;
+            elapsedTime += Time.deltaTime;
             Debug.Log(elapsedTime);
             yield return StartCoroutine(ZoomCameraCoroutine());
         }        
@@ -110,10 +110,7 @@ public class MapToIsland : MonoBehaviour
 
         if (camera != null)
         {
-            float duration = 1f; // Duration in seconds
-            float elapsedTime = 0f;
-
-            while (elapsedTime < duration)
+            while (elapsedTime < totalDuration)
             {
                 // Adjust the camera's position to zoom in on the player
                 Vector3 newPosition = cameraTransform.position;
