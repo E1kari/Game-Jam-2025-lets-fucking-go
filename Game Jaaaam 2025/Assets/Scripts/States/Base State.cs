@@ -10,7 +10,6 @@ public enum StateType
 
 public interface BaseState
 {
-
     public abstract void Enter(StateMachine pa_stateMachine);
     public abstract void UpdateState();
     public abstract void CheckExitConditions();

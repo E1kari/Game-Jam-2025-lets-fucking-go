@@ -51,25 +51,20 @@ public class WalkingState : BaseState
 
     public void DetermineDirection()
     {
-        if (rb.linearVelocity.x == 0 && rb.linearVelocity.z == 0)
+        float x = rb.linearVelocity.x;
+        float z = rb.linearVelocity.z;
+
+        if (x == 0 && z == 0)
         {
             direction = 2;
         }
-        else if (rb.linearVelocity.x <= rb.linearVelocity.z && rb.linearVelocity.x <= rb.linearVelocity.z * -1)
+        else if (Mathf.Abs(x) <= Mathf.Abs(z))
         {
-            direction = 3; // links
+            direction = (z >= 0) ? 0 : 2; // hinten oder vorne
         }
-        else if (rb.linearVelocity.x >= rb.linearVelocity.z && rb.linearVelocity.x >= rb.linearVelocity.z * -1)
+        else
         {
-            direction = 1; // rechts
-        }
-        else if (rb.linearVelocity.z <= rb.linearVelocity.x && rb.linearVelocity.z <= rb.linearVelocity.x * -1)
-        {
-            direction = 2; // vorne
-        }
-        else if (rb.linearVelocity.z >= rb.linearVelocity.x && rb.linearVelocity.z >= rb.linearVelocity.x * -1)
-        {
-            direction = 0; // hinten
+            direction = (x >= 0) ? 1 : 3; // rechts oder links
         }
     }
 

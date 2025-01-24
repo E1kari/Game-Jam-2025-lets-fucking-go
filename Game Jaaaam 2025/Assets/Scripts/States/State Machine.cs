@@ -8,8 +8,6 @@ public class StateMachine : MonoBehaviour
     private StateType currentStateType = StateType.IDLE;
     private StateType previousStateType = StateType.IDLE;
 
-
-
     void Start()
     {
         currentState.Enter(this);
