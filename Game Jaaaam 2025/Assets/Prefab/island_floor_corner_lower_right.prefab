@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6710618935416523207}
   - component: {fileID: 746843624697476499}
-  - component: {fileID: 208243991537924196}
-  - component: {fileID: 5039369019555533797}
+  - component: {fileID: -6647877078460120909}
+  - component: {fileID: 536011306326985536}
   m_Layer: 0
   m_Name: island_floor_corner_lower_right
   m_TagString: Island
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5136392777084533419}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 17.5, y: 0, z: -22.5}
+  m_LocalPosition: {x: -13.5, y: 0, z: -4.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -82,14 +82,14 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &208243991537924196
+--- !u!65 &-6647877078460120909
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,7 +110,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.0000002, z: 0.20000005}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5039369019555533797
+--- !u!114 &536011306326985536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
