@@ -14,6 +14,7 @@ public class WalkingState : BaseState
     Animator animator;
     int direction = 2;
     private int lastDirection = 2;
+    public static Vector2 playerDirection;
 
     public void Enter(StateMachine pa_stateMachine)
     {
@@ -35,6 +36,8 @@ public class WalkingState : BaseState
 
         Vector2 move = moveAction.ReadValue<Vector2>();
         rb.linearVelocity = new Vector3(move.x * playerData.movementSpeed, 0, move.y * playerData.movementSpeed);
+
+        playerDirection = move; // Save the direction the player is facing
 
         animator.SetBool("change direction", false);
         DetermineDirection(move);
