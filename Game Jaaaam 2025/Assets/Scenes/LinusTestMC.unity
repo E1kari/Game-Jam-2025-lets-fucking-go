@@ -759,6 +759,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1089394131629731709, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1457316554385420908, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_Name
       value: Player_Sprite
@@ -792,9 +796,21 @@ PrefabInstance:
       value: Camera
       objectReference: {fileID: 0}
     - target: {fileID: 5053786817440993775, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
+      propertyPath: m_Size.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053786817440993775, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: -1589012408, guid: d1b2f2a0aa7034340b28e226b4668cfc, type: 3}
+    - target: {fileID: 5053786817440993775, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053786817440993775, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7165837487665329824, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: maxWater
       value: 250
