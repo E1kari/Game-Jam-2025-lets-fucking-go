@@ -11,11 +11,14 @@ public class WaterGun : MonoBehaviour
     InputAction shootAction;
     private Animator animator;
     private PushableWall currentPushableWall = null;
+    private GameObject waterParticlePrefab;
+    private GameObject waterParticles;
 
     void Start()
     {
         s_WaterGun = Resources.Load<S_WaterGun>("Scriptable Objects/S_WaterGun");
         currentWater = s_WaterGun.maxWater;
+        waterParticlePrefab = s_WaterGun.waterParticlePrefab;
         playerInput = GetComponent<PlayerInput>();
         shootAction = playerInput.actions["Shoot"];
         animator = GetComponent<Animator>();
@@ -53,6 +56,14 @@ public class WaterGun : MonoBehaviour
     {
         isShooting = true;
         animator.SetBool("isShooting", true);
+
+        // Instantiate the water particle effect
+        if (waterParticlePrefab != null && waterParticles == null)
+        {
+            Vector3 startPosition = transform.position;
+            Vector3 direction = GetShootDirection();
+            waterParticles = Instantiate(waterParticlePrefab, startPosition, Quaternion.LookRotation(direction));
+        }
     }
 
     void Shoot()
@@ -100,6 +111,13 @@ public class WaterGun : MonoBehaviour
         // Draw the raycast in the scene view
         Debug.DrawLine(startPosition, endPosition, Color.blue, 0.1f);
         Debug.Log("Shooting water in direction: " + direction + " at position: " + endPosition  + " with remaining water: " + currentWater);
+
+        // Update the particle effect position and rotation
+        if (waterParticles != null)
+        {
+            waterParticles.transform.position = startPosition;
+            waterParticles.transform.rotation = Quaternion.LookRotation(direction);
+        }
     }
 
     void StopShooting()
@@ -112,6 +130,13 @@ public class WaterGun : MonoBehaviour
         {
             currentPushableWall.StopPushing(); // Stop pushing the wall when shooting stops
             currentPushableWall = null;
+        }
+
+        // Destroy the water particle effect
+        if (waterParticles != null)
+        {
+            Destroy(waterParticles);
+            waterParticles = null;
         }
     }
 
@@ -151,5 +176,23 @@ public class WaterGun : MonoBehaviour
                 return Vector3.back; // Back
             }
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            RegenerateWater();
+        }
+    }
+
+    private void RegenerateWater()
+    {
+        currentWater += s_WaterGun.waterRegenAmount;
+        if (currentWater > s_WaterGun.maxWater)
+        {
+            currentWater = s_WaterGun.maxWater;
+        }
+        //Debug.Log("Regenerated water. Current water: " + currentWater);
     }
 }

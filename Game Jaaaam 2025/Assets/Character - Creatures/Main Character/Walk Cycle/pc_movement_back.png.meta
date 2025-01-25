@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 2048
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,10 +113,10 @@ TextureImporter:
       name: pc_movement_back_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 441
-        height: 557
+        x: 11
+        y: 49
+        width: 418
+        height: 495
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +135,10 @@ TextureImporter:
       name: pc_movement_back_1
       rect:
         serializedVersion: 2
-        x: 441
-        y: 0
-        width: 412
-        height: 557
+        x: 464
+        y: 55
+        width: 379
+        height: 472
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,10 +157,10 @@ TextureImporter:
       name: pc_movement_back_2
       rect:
         serializedVersion: 2
-        x: 855
-        y: 0
-        width: 359
-        height: 557
+        x: 872
+        y: 39
+        width: 325
+        height: 445
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: pc_movement_back_3
       rect:
         serializedVersion: 2
-        x: 1213
-        y: 0
-        width: 409
-        height: 557
+        x: 1229
+        y: 55
+        width: 377
+        height: 479
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: pc_movement_back_4
       rect:
         serializedVersion: 2
-        x: 1627
-        y: 0
-        width: 438
-        height: 557
+        x: 1643
+        y: 54
+        width: 407
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: pc_movement_back_5
       rect:
         serializedVersion: 2
-        x: 2065
-        y: 0
-        width: 426
-        height: 557
+        x: 2092
+        y: 55
+        width: 379
+        height: 479
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: pc_movement_back_6
       rect:
         serializedVersion: 2
-        x: 2489
-        y: 0
-        width: 382
-        height: 557
+        x: 2517
+        y: 36
+        width: 324
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +267,10 @@ TextureImporter:
       name: pc_movement_back_7
       rect:
         serializedVersion: 2
-        x: 2870
-        y: 0
-        width: 410
-        height: 557
+        x: 2878
+        y: 55
+        width: 379
+        height: 472
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

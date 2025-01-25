@@ -27,4 +27,9 @@ public class StateMachine : MonoBehaviour
         currentStateType = currentState.GetStateType();
         currentState.Enter(this);
     }
+
+    public BaseState GetCurrentState()
+    {
+        return currentState;
+    }
 }

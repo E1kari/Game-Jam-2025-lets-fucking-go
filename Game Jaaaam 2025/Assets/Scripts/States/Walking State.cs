@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,6 +17,19 @@ public class WalkingState : BaseState
     private int lastDirection = 2;
     public static Vector2 playerDirection;
 
+    private bool canMove = true;
+
+    public void DisableMovement()
+    {
+        canMove = false;
+        rb.linearVelocity = Vector3.zero; // Stop movement immediately
+    }
+
+    public void EnableMovement()
+    {
+        canMove = true;
+    }
+
     public void Enter(StateMachine pa_stateMachine)
     {
         Debug.Log("entered walking state");
@@ -32,15 +46,20 @@ public class WalkingState : BaseState
 
     public void UpdateState()
     {
+        if (!canMove) return;
+
         CheckExitConditions();
 
         Vector2 move = moveAction.ReadValue<Vector2>();
         rb.linearVelocity = new Vector3(move.x * playerData.movementSpeed, 0, move.y * playerData.movementSpeed);
 
-        playerDirection = move; // Save the direction the player is facing
+        if (move != Vector2.zero)
+        {
+            playerDirection = move; // Save the direction the player is facing
+            DetermineDirection(move);
+        }
 
         animator.SetBool("change direction", false);
-        DetermineDirection(move);
 
         if (direction != lastDirection)
         {
@@ -58,7 +77,7 @@ public class WalkingState : BaseState
 
         if (x == 0 && y == 0)
         {
-            direction = 2; // idle
+            direction = lastDirection; // Maintain the last direction when idle
         }
         else if (Mathf.Abs(x) > Mathf.Abs(y))
         {
