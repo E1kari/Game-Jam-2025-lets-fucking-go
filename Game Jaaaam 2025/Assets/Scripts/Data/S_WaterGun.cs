@@ -12,4 +12,7 @@ public class S_WaterGun : ScriptableObject
     
     [Tooltip("The amount of water the player gets when touching a puddle.")]
     public int waterRegenAmount = 20;
+
+    [Tooltip("The Prefab of the water particle effect. This is the effect that will be played when the player shoots the water gun.")]
+    public GameObject waterParticlePrefab;
 }

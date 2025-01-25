@@ -53,10 +53,13 @@ public class WalkingState : BaseState
         Vector2 move = moveAction.ReadValue<Vector2>();
         rb.linearVelocity = new Vector3(move.x * playerData.movementSpeed, 0, move.y * playerData.movementSpeed);
 
-        playerDirection = move; // Save the direction the player is facing
+        if (move != Vector2.zero)
+        {
+            playerDirection = move; // Save the direction the player is facing
+            DetermineDirection(move);
+        }
 
         animator.SetBool("change direction", false);
-        DetermineDirection(move);
 
         if (direction != lastDirection)
         {
@@ -74,7 +77,7 @@ public class WalkingState : BaseState
 
         if (x == 0 && y == 0)
         {
-            direction = 2; // idle
+            direction = lastDirection; // Maintain the last direction when idle
         }
         else if (Mathf.Abs(x) > Mathf.Abs(y))
         {
