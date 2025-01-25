@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f33a9b956efc664e8dea8f9a2010b37, type: 3}
-  m_Name: S_Player_Data
+  m_Script: {fileID: 11500000, guid: affe78d5d1cd0b149b06f2da2bb55654, type: 3}
+  m_Name: S_MapToIsland
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  targetPosition: {x: 0, y: 0.25, z: -0.65}
+  zoomDuration: 1

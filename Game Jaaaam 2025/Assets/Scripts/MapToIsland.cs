@@ -9,66 +9,79 @@ public class MapToIsland : MonoBehaviour
 {
     private Rigidbody playerRigidbody;
     private BoxCollider islandCollider;
-    private Transform cameraTransform;
-    private new Camera camera;
     PlayerInput playerInput;
-
-    Vector3 targetPosition;
-
-    private float elapsedTime = 0f;
-    private float totalDuration = 1f;
-
-    public bool isTouchingIsland = false;
+    private S_MapToIsland mapToIsland;
+    private bool isTouchingIsland;
 
     private void Start()
     {
+        mapToIsland = Resources.Load<S_MapToIsland>("Scriptable Objects/S_MapToIsland");
         playerRigidbody = GetComponent<Rigidbody>();
-
         playerInput = GetComponent<PlayerInput>();
+        isTouchingIsland = false;
     }
 
     private void Update()
     {
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "Island") // Check if the player is touching the island
+        if (collider.gameObject.tag == "Island") // Check if the player is touching the island
         {
-            Debug.Log("Player is touching the island");
-            isTouchingIsland = true;
+            if (isTouchingIsland)
+            {
+                return;
+            }
+            else
+            {
+                isTouchingIsland = true;
+                Debug.Log("Player is touching the island");
+        
+                PrepareJoiningIsland(collider); // Switch to island                 
+            }
+        }
+    }
+    private void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.tag == "Island")
+        {
+            if (!isTouchingIsland)
+            {
+                return;
+            }
+            else
+            {
+                isTouchingIsland = false;
+                Debug.Log("Player is leaving the island");
 
-            PrepareSceneSwitch(); // Switch to the island scene
-
-            islandCollider = collision.gameObject.GetComponent<BoxCollider>();
-            islandCollider.enabled = false; // Disable the island's collider
+                PrepareLeavingIsland(collider); // Switch to main
+            }
         }
     }
 
-    private void PrepareSceneSwitch()
+    private void PrepareJoiningIsland(Collider collider)
     {
         DisableMovement(); // Stop the player's movement
 
-        ZoomCamera(); // Zoom the camera to the island
+        ZoomInCamera(); // Zoom the camera to the island
+
+        EnableMovement(); // Enable the player's movement
     }
 
-    private void MissingObjectError()
+    private void PrepareLeavingIsland(Collider collider)
     {
-        if (playerRigidbody == null)
-        {
-            Debug.LogError("Player Rigidbody is missing");
-        }
-        if (islandCollider == null)
-        {
-            Debug.LogError("Island BoxCollider is missing");
-        }
+        DisableMovement(); // Stop the player's movement
+
+        ZoomOutCamera(); // Zoom the camera to the main
+
+        EnableMovement(); // Enable the player's movement
     }
 
     private void DisableMovement()
     {
         Debug.Log("Stopping player movement");
         if (playerInput == null)
-
         {
             Debug.LogError("Player Input is missing");
         }
@@ -88,40 +101,77 @@ public class MapToIsland : MonoBehaviour
         playerInput.enabled = true; // Enable the player's input
     }
 
-    private void ZoomCamera()
+    private void ZoomInCamera()
     {
         Debug.Log("Zooming camera to the island");
-        StartCoroutine(ZoomCameraCoroutine());
+        StartCoroutine(ZoomInCoroutine());
     }
 
-private IEnumerator ZoomCameraCoroutine()
-{
-    Transform cameraTransform = transform.Find("Player_Sprite/Camera");
-    Camera camera = cameraTransform.GetComponent<Camera>();
-
-    if (camera != null)
+    private void ZoomOutCamera()
     {
-        Vector3 targetPosition = new Vector3(0, 0.25f, -0.65f);
-        Vector3 startPosition = cameraTransform.localPosition;
-        float elapsedTime = 0f;
-        float zoomDuration = 1f; // 1 second
+        Debug.Log("Zooming camera to the main");
+        StartCoroutine(ZoomOutCoroutine());
+    }
 
-        while (elapsedTime < zoomDuration)
+    private IEnumerator ZoomInCoroutine()
+    {
+        Transform cameraTransform = transform.Find("Player_Sprite/Camera");
+        Camera camera = cameraTransform.GetComponent<Camera>();
+
+        if (camera != null)
         {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / zoomDuration;
-            cameraTransform.localPosition = Vector3.Lerp(startPosition, targetPosition, t);
-            yield return null;
+            Vector3 targetPosition = mapToIsland.zoomInPos;
+            Vector3 startPosition = cameraTransform.localPosition;
+            float elapsedTime = 0f;
+            float zoomDuration = mapToIsland.zoomDuration;
+
+            while (elapsedTime < zoomDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                float t = elapsedTime / zoomDuration;
+                cameraTransform.localPosition = Vector3.Lerp(startPosition, targetPosition, t);
+                yield return null;
+            }
+
+            cameraTransform.localPosition = targetPosition;
+            Debug.Log("Finished zooming camera to the island");
+        }
+        else
+        {
+            Debug.LogError("Camera component is missing");
         }
 
-        cameraTransform.localPosition = targetPosition;
-        Debug.Log("Finished zooming camera to the island");
-    }
-    else
-    {
-        Debug.LogError("Camera component is missing");
-    }
         Debug.Log("Finished zooming camera");
-        EnableMovement(); // Enable the player's movement
+    }
+
+    private IEnumerator ZoomOutCoroutine()
+    {
+        Transform cameraTransform = transform.Find("Player_Sprite/Camera");
+        Camera camera = cameraTransform.GetComponent<Camera>();
+
+        if (camera != null)
+        {
+            Vector3 targetPosition = mapToIsland.zoomOutPos;
+            Vector3 startPosition = cameraTransform.localPosition;
+            float elapsedTime = 0f;
+            float zoomDuration = mapToIsland.zoomDuration;
+
+            while (elapsedTime < zoomDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                float t = elapsedTime / zoomDuration;
+                cameraTransform.localPosition = Vector3.Lerp(startPosition, targetPosition, t);
+                yield return null;
+            }
+
+            cameraTransform.localPosition = targetPosition;
+            Debug.Log("Finished zooming camera to the main");
+        }
+        else
+        {
+            Debug.LogError("Camera component is missing");
+        }
+
+        Debug.Log("Finished zooming camera");
     }
 }
