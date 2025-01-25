@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map
       objectReference: {fileID: 0}
+    - target: {fileID: 7080368857759982104, guid: a6cfd5054d56337428b9380d7715d98d, type: 3}
+      propertyPath: m_TagString
+      value: Ocean
+      objectReference: {fileID: 0}
     - target: {fileID: 7581563540347519491, guid: a6cfd5054d56337428b9380d7715d98d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -787,6 +791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 5053786817440993775, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7165837487665329824, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: maxWater
       value: 250
