@@ -12,4 +12,7 @@ public class S_WaterGun : ScriptableObject
     
     [Tooltip("The amount of water the player gets when touching a puddle.")]
     public int waterRegenAmount = 20;
+
+    [Tooltip("The duration of the water gun particle effect. This is how long the water gun particle effect will last.")]
+    public float particelDuartion = 2.0f;
 }

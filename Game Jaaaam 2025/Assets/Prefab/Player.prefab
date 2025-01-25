@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5236509f614004ab2d7c41dbdf758d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterParticlePrefab: {fileID: 0}
 --- !u!54 &2017642028175445712
 Rigidbody:
   m_ObjectHideFlags: 0

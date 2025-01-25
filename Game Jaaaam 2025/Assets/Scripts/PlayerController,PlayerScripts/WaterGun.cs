@@ -11,11 +11,16 @@ public class WaterGun : MonoBehaviour
     InputAction shootAction;
     private Animator animator;
     private PushableWall currentPushableWall = null;
+    public float particelDuartion;
+
+    [Tooltip("Particle system prefab for the water gun effect.")]
+    public GameObject waterParticlePrefab;
 
     void Start()
     {
         s_WaterGun = Resources.Load<S_WaterGun>("Scriptable Objects/S_WaterGun");
         currentWater = s_WaterGun.maxWater;
+        particelDuartion = s_WaterGun.particelDuartion;
         playerInput = GetComponent<PlayerInput>();
         shootAction = playerInput.actions["Shoot"];
         animator = GetComponent<Animator>();
@@ -100,6 +105,13 @@ public class WaterGun : MonoBehaviour
         // Draw the raycast in the scene view
         Debug.DrawLine(startPosition, endPosition, Color.blue, 0.1f);
         Debug.Log("Shooting water in direction: " + direction + " at position: " + endPosition  + " with remaining water: " + currentWater);
+
+        // Instantiate the water particle effect
+        if (waterParticlePrefab != null)
+        {
+            GameObject waterParticles = Instantiate(waterParticlePrefab, startPosition, Quaternion.LookRotation(direction));
+            Destroy(waterParticles, particelDuartion); // Destroy the particle effect after x seconds
+        }
     }
 
     void StopShooting()
