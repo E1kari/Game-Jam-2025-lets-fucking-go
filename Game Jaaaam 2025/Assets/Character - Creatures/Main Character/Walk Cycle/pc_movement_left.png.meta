@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06838f9d1d8aa3043b7709607eaedf29
+guid: 7c6d5cf6f70111442b4118611b87dd3f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pc_movement_back_0
+      name: pc_movement_left_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 49
-        width: 418
-        height: 495
+        x: 54
+        y: 31
+        width: 298
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91a888317f994e0459859f085e35baa7
-      internalID: -1112487434
+      spriteID: 0fb8939b32f61ef4c9c68d994f722b7c
+      internalID: 1963293339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_1
+      name: pc_movement_left_1
       rect:
         serializedVersion: 2
-        x: 464
-        y: 55
-        width: 379
-        height: 472
+        x: 420
+        y: 30
+        width: 294
+        height: 475
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f859c296cc59494f9962d678120b60d
-      internalID: -1864264971
+      spriteID: d4bcb84ca7e35b446b55a97c3ff42b56
+      internalID: -766294850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_2
+      name: pc_movement_left_2
       rect:
         serializedVersion: 2
-        x: 872
-        y: 39
-        width: 325
-        height: 445
+        x: 793
+        y: 25
+        width: 287
+        height: 435
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,19 +169,63 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 519591c589c39694b9efbe062a6f0081
-      internalID: -1934159820
+      spriteID: f424a833136db914bb6fd6def09d3f17
+      internalID: -780283022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_3
+      name: pc_movement_left_3
       rect:
         serializedVersion: 2
-        x: 1229
-        y: 55
-        width: 377
+        x: 1184
+        y: 27
+        width: 284
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f8080860adfbd4db81bde1d5399037
+      internalID: -1257902860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pc_movement_left_4
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 24
+        width: 296
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27cbf1c95e6b9a24b898c18be36ff3bd
+      internalID: -2117009802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pc_movement_left_5
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 28
+        width: 285
         height: 479
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -191,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d23be93601798d4a9d9b952ea07e2f6
-      internalID: -479162185
+      spriteID: 6d158f2def849304290f7c191e35cdcd
+      internalID: -1648776853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_4
+      name: pc_movement_left_6
       rect:
         serializedVersion: 2
-        x: 1643
-        y: 54
-        width: 407
-        height: 488
+        x: 2368
+        y: 25
+        width: 288
+        height: 435
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de714568d46f2bf49971cc78a96dd1fa
-      internalID: 2133484435
+      spriteID: 30a232dd24034844a8143566b38e2d3a
+      internalID: 1240736020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_5
+      name: pc_movement_left_7
       rect:
         serializedVersion: 2
-        x: 2092
-        y: 55
-        width: 379
-        height: 479
+        x: 2764
+        y: 30
+        width: 293
+        height: 475
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,52 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14d81c5fc8da46f4e869527489cc0698
-      internalID: 968465791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pc_movement_back_6
-      rect:
-        serializedVersion: 2
-        x: 2517
-        y: 36
-        width: 324
-        height: 443
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec43aee3a4e880440ac24345317ecd5d
-      internalID: -2063389777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pc_movement_back_7
-      rect:
-        serializedVersion: 2
-        x: 2878
-        y: 55
-        width: 379
-        height: 472
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 582bfdd3a7ed97148bf3e4782073f466
-      internalID: 469362073
+      spriteID: 9f99129446e229e45a6d559c003d563c
+      internalID: -564259000
       vertices: []
       indices: 
       edges: []
@@ -289,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7d90cacc74c360a489e3bcfab7d4aa94
+    spriteID: 139d723aeeee6ae40b7c72e406fe2509
     internalID: 0
     vertices: []
     indices: 
@@ -299,14 +299,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pc_movement_back_0: -1112487434
-      pc_movement_back_1: -1864264971
-      pc_movement_back_2: -1934159820
-      pc_movement_back_3: -479162185
-      pc_movement_back_4: 2133484435
-      pc_movement_back_5: 968465791
-      pc_movement_back_6: -2063389777
-      pc_movement_back_7: 469362073
+      pc_movement_left_0: 1963293339
+      pc_movement_left_1: -766294850
+      pc_movement_left_2: -780283022
+      pc_movement_left_3: -1257902860
+      pc_movement_left_4: -2117009802
+      pc_movement_left_5: -1648776853
+      pc_movement_left_6: 1240736020
+      pc_movement_left_7: -564259000
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06838f9d1d8aa3043b7709607eaedf29
+guid: 9646e940be4623840bdb22ebb35b80da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pc_movement_back_0
+      name: pc_movement_right_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 49
-        width: 418
-        height: 495
+        x: 56
+        y: 31
+        width: 298
+        height: 481
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91a888317f994e0459859f085e35baa7
-      internalID: -1112487434
+      spriteID: 440216b890385bc4b897cc8f82b7afa7
+      internalID: 490637826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_1
+      name: pc_movement_right_1
       rect:
         serializedVersion: 2
-        x: 464
-        y: 55
-        width: 379
-        height: 472
+        x: 450
+        y: 30
+        width: 295
+        height: 476
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f859c296cc59494f9962d678120b60d
-      internalID: -1864264971
+      spriteID: 9c9826fb62421df4cb11630eb1c6e20c
+      internalID: -1805915564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_2
+      name: pc_movement_right_2
       rect:
         serializedVersion: 2
-        x: 872
-        y: 39
-        width: 325
-        height: 445
+        x: 817
+        y: 24
+        width: 287
+        height: 435
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 519591c589c39694b9efbe062a6f0081
-      internalID: -1934159820
+      spriteID: 9902de3d5ca015b42979f1875af352fe
+      internalID: -915642801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_3
+      name: pc_movement_right_3
       rect:
         serializedVersion: 2
-        x: 1229
-        y: 55
-        width: 377
-        height: 479
+        x: 1161
+        y: 27
+        width: 285
+        height: 481
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,19 +191,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d23be93601798d4a9d9b952ea07e2f6
-      internalID: -479162185
+      spriteID: b3e5be92b611b274f96f9bc347297894
+      internalID: -125171925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_4
+      name: pc_movement_right_4
       rect:
         serializedVersion: 2
-        x: 1643
-        y: 54
-        width: 407
+        x: 1517
+        y: 24
+        width: 298
         height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de714568d46f2bf49971cc78a96dd1fa
-      internalID: 2133484435
+      spriteID: 13e2e9e494c3b254abbae6791ad9b57f
+      internalID: 123988391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_5
+      name: pc_movement_right_5
       rect:
         serializedVersion: 2
-        x: 2092
-        y: 55
-        width: 379
-        height: 479
+        x: 1878
+        y: 27
+        width: 286
+        height: 481
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14d81c5fc8da46f4e869527489cc0698
-      internalID: 968465791
+      spriteID: 7df6e020be73b1449b1ff240ed2770f5
+      internalID: -2027332933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_6
+      name: pc_movement_right_6
       rect:
         serializedVersion: 2
-        x: 2517
-        y: 36
-        width: 324
-        height: 443
+        x: 2245
+        y: 24
+        width: 288
+        height: 435
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec43aee3a4e880440ac24345317ecd5d
-      internalID: -2063389777
+      spriteID: 612e6f4b9c29d0148a48d812f3709e37
+      internalID: -228684200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pc_movement_back_7
+      name: pc_movement_right_7
       rect:
         serializedVersion: 2
-        x: 2878
-        y: 55
-        width: 379
-        height: 472
+        x: 2629
+        y: 30
+        width: 295
+        height: 476
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 582bfdd3a7ed97148bf3e4782073f466
-      internalID: 469362073
+      spriteID: 6800efe189501ef4da916de6fad8320f
+      internalID: 403714936
       vertices: []
       indices: 
       edges: []
@@ -289,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7d90cacc74c360a489e3bcfab7d4aa94
+    spriteID: b96ca100466398b44a9fa0ed102c91a5
     internalID: 0
     vertices: []
     indices: 
@@ -299,14 +299,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pc_movement_back_0: -1112487434
-      pc_movement_back_1: -1864264971
-      pc_movement_back_2: -1934159820
-      pc_movement_back_3: -479162185
-      pc_movement_back_4: 2133484435
-      pc_movement_back_5: 968465791
-      pc_movement_back_6: -2063389777
-      pc_movement_back_7: 469362073
+      pc_movement_right_0: 490637826
+      pc_movement_right_1: -1805915564
+      pc_movement_right_2: -915642801
+      pc_movement_right_3: -125171925
+      pc_movement_right_4: 123988391
+      pc_movement_right_5: -2027332933
+      pc_movement_right_6: -228684200
+      pc_movement_right_7: 403714936
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
