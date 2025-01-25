@@ -1103,6 +1103,10 @@ PrefabInstance:
       propertyPath: maxWater
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 7165837487665329824, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
+      propertyPath: waterParticlePrefab
+      value: 
+      objectReference: {fileID: 2330312493239763128, guid: 4f10112c052db7b4ea0ba703ab51bedd, type: 3}
     - target: {fileID: 8179072453042026733, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1128,7 +1132,8 @@ PrefabInstance:
       value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9057713742336094377, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}

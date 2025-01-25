@@ -11,16 +11,14 @@ public class WaterGun : MonoBehaviour
     InputAction shootAction;
     private Animator animator;
     private PushableWall currentPushableWall = null;
-    public float particelDuartion;
-
-    [Tooltip("Particle system prefab for the water gun effect.")]
-    public GameObject waterParticlePrefab;
+    private GameObject waterParticlePrefab;
+    private GameObject waterParticles;
 
     void Start()
     {
         s_WaterGun = Resources.Load<S_WaterGun>("Scriptable Objects/S_WaterGun");
         currentWater = s_WaterGun.maxWater;
-        particelDuartion = s_WaterGun.particelDuartion;
+        waterParticlePrefab = s_WaterGun.waterParticlePrefab;
         playerInput = GetComponent<PlayerInput>();
         shootAction = playerInput.actions["Shoot"];
         animator = GetComponent<Animator>();
@@ -58,6 +56,14 @@ public class WaterGun : MonoBehaviour
     {
         isShooting = true;
         animator.SetBool("isShooting", true);
+
+        // Instantiate the water particle effect
+        if (waterParticlePrefab != null && waterParticles == null)
+        {
+            Vector3 startPosition = transform.position;
+            Vector3 direction = GetShootDirection();
+            waterParticles = Instantiate(waterParticlePrefab, startPosition, Quaternion.LookRotation(direction));
+        }
     }
 
     void Shoot()
@@ -106,11 +112,11 @@ public class WaterGun : MonoBehaviour
         Debug.DrawLine(startPosition, endPosition, Color.blue, 0.1f);
         Debug.Log("Shooting water in direction: " + direction + " at position: " + endPosition  + " with remaining water: " + currentWater);
 
-        // Instantiate the water particle effect
-        if (waterParticlePrefab != null)
+        // Update the particle effect position and rotation
+        if (waterParticles != null)
         {
-            GameObject waterParticles = Instantiate(waterParticlePrefab, startPosition, Quaternion.LookRotation(direction));
-            Destroy(waterParticles, particelDuartion); // Destroy the particle effect after x seconds
+            waterParticles.transform.position = startPosition;
+            waterParticles.transform.rotation = Quaternion.LookRotation(direction);
         }
     }
 
@@ -124,6 +130,13 @@ public class WaterGun : MonoBehaviour
         {
             currentPushableWall.StopPushing(); // Stop pushing the wall when shooting stops
             currentPushableWall = null;
+        }
+
+        // Destroy the water particle effect
+        if (waterParticles != null)
+        {
+            Destroy(waterParticles);
+            waterParticles = null;
         }
     }
 
@@ -164,6 +177,7 @@ public class WaterGun : MonoBehaviour
             }
         }
     }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Water"))
