@@ -152,4 +152,21 @@ public class WaterGun : MonoBehaviour
             }
         }
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            RegenerateWater();
+        }
+    }
+
+    private void RegenerateWater()
+    {
+        currentWater += s_WaterGun.waterRegenAmount;
+        if (currentWater > s_WaterGun.maxWater)
+        {
+            currentWater = s_WaterGun.maxWater;
+        }
+        //Debug.Log("Regenerated water. Current water: " + currentWater);
+    }
 }

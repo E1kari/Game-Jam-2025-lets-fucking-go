@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - Island
+  - Water
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
   - Partikel
+  - Player
   - Water
   - UI
   - 
