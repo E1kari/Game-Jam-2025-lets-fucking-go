@@ -9,21 +9,15 @@ public class MapToIsland : MonoBehaviour
 {
     private Rigidbody playerRigidbody;
     private BoxCollider islandCollider;
-    private Transform cameraTransform;
-    private new Camera camera;
     PlayerInput playerInput;
-
-    Vector3 targetPosition;
-
-    private float elapsedTime = 0f;
-    private float totalDuration = 1f;
+    private S_MapToIsland mapToIsland;
 
     public bool isTouchingIsland = false;
 
     private void Start()
     {
+        mapToIsland = Resources.Load<S_MapToIsland>("Scriptable Objects/S_MapToIsland");
         playerRigidbody = GetComponent<Rigidbody>();
-
         playerInput = GetComponent<PlayerInput>();
     }
 
@@ -101,10 +95,10 @@ private IEnumerator ZoomCameraCoroutine()
 
     if (camera != null)
     {
-        Vector3 targetPosition = new Vector3(0, 0.25f, -0.65f);
+        Vector3 targetPosition = mapToIsland.targetPosition;
         Vector3 startPosition = cameraTransform.localPosition;
         float elapsedTime = 0f;
-        float zoomDuration = 1f; // 1 second
+        float zoomDuration = mapToIsland.zoomDuration;
 
         while (elapsedTime < zoomDuration)
         {
@@ -121,7 +115,8 @@ private IEnumerator ZoomCameraCoroutine()
     {
         Debug.LogError("Camera component is missing");
     }
-        Debug.Log("Finished zooming camera");
-        EnableMovement(); // Enable the player's movement
+
+    Debug.Log("Finished zooming camera");
+    EnableMovement(); // Enable the player's movement
     }
 }
