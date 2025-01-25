@@ -69,6 +69,12 @@ public class WaterGun : MonoBehaviour
             // Handle hit logic here
             Debug.Log("Hit: " + hit.collider.name);
             endPosition = hit.point;
+
+            FakeWall fakeWall = hit.collider.GetComponent<FakeWall>(); // Get the FakeWall component
+            if (fakeWall != null)
+            {
+                fakeWall.Explode(); // Call the Explode method
+            }
         }
 
         // Draw the raycast in the scene view

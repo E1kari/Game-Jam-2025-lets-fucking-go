@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1346fe34d3b2543baeba5855e235a7, type: 3}
   m_Name: S_WaterGun
   m_EditorClassIdentifier: 
-  maxWater: 250
+  maxWater: 25000
   range: 2
