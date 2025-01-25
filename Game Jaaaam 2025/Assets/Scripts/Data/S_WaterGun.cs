@@ -9,4 +9,7 @@ public class S_WaterGun : ScriptableObject
     
     [Tooltip("The range of the water gun. This is the maximum distance the water can travel.")]
     public float range = 2.0f; // Range in tiles
+    
+    [Tooltip("The amount of water the player gets when touching a puddle.")]
+    public int waterRegenAmount = 20;
 }
