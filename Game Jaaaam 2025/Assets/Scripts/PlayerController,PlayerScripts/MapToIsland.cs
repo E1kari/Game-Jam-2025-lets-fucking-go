@@ -41,16 +41,13 @@ public class MapToIsland : MonoBehaviour
                 isTouchingIsland = true;
                 Debug.Log("Player is touching the island");
 
-                if (spriteRenderer.sprite = null)
+                if (spriteRenderer.sprite == null)
                 {
                     Debug.LogError("Sprite Renderer is missing");
                     return;
                 }
-                if (spriteRenderer.sprite = mapSprite)
-                {
-                    spriteRenderer.sprite = islandSprite;
-                    Debug.Log("Sprite switched to island sprite. Sprite is now: " + spriteRenderer.sprite);
-                }
+                spriteRenderer.sprite = islandSprite;
+                Debug.Log("Sprite switched to island sprite. Sprite is now: " + spriteRenderer.sprite.name);
         
                 PrepareJoiningIsland(collider); // Switch to island                 
             }
@@ -69,16 +66,13 @@ public class MapToIsland : MonoBehaviour
                 isTouchingIsland = false;
                 Debug.Log("Player is touching the island");
 
-                if (spriteRenderer.sprite = null)
+                if (spriteRenderer.sprite == null)
                 {
                     Debug.LogError("Sprite Renderer is missing");
                     return;
                 }
-                if (spriteRenderer.sprite =  islandSprite)
-                {
-                    spriteRenderer.sprite = mapSprite;
-                    Debug.Log("Sprite switched to map sprite. Sprite is now: " + spriteRenderer.sprite);
-                }
+                spriteRenderer.sprite = mapSprite;
+                Debug.Log("Sprite switched to map sprite. Sprite is now: " + spriteRenderer.sprite.name);
 
                 PrepareLeavingIsland(collider); // Switch to main
             }
