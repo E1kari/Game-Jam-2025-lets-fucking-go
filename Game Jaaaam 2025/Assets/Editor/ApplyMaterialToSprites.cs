@@ -5,15 +5,15 @@ public class ApplyMaterialToSprites : EditorWindow
 {
     private Material materialToApply;
 
-    [MenuItem("Tools/Apply Material to All Sprites")]
+    [MenuItem("Tools/Apply Material to Untagged Sprites")]
     public static void ShowWindow()
     {
-        GetWindow<ApplyMaterialToSprites>("Apply Material to Sprites");
+        GetWindow<ApplyMaterialToSprites>("Apply Material to Untagged Sprites");
     }
 
     private void OnGUI()
     {
-        GUILayout.Label("Apply Material to All Sprite Renderers", EditorStyles.boldLabel);
+        GUILayout.Label("Apply Material to Untagged Sprite Renderers", EditorStyles.boldLabel);
 
         materialToApply = (Material)EditorGUILayout.ObjectField("Material", materialToApply, typeof(Material), false);
 
@@ -25,21 +25,24 @@ public class ApplyMaterialToSprites : EditorWindow
                 return;
             }
 
-            ApplyMaterialToAllSprites();
+            ApplyMaterialToUntaggedSprites();
         }
     }
 
-    private void ApplyMaterialToAllSprites()
+    private void ApplyMaterialToUntaggedSprites()
     {
         SpriteRenderer[] spriteRenderers = FindObjectsOfType<SpriteRenderer>();
         int count = 0;
 
         foreach (SpriteRenderer sr in spriteRenderers)
         {
-            sr.sharedMaterial = materialToApply; // sharedMaterial avoids creating instances.
-            count++;
+            if (sr.gameObject.tag == "Untagged") // Check if the GameObject is untagged
+            {
+                sr.sharedMaterial = materialToApply; // Apply material
+                count++;
+            }
         }
 
-        Debug.Log($"Applied material to {count} Sprite Renderers.");
+        Debug.Log($"Applied material to {count} untagged Sprite Renderers.");
     }
 }
