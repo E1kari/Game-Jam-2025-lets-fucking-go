@@ -10,6 +10,7 @@ public class WaterGun : MonoBehaviour
     PlayerInput playerInput;
     InputAction shootAction;
     private Animator animator;
+    private PushableWall currentPushableWall = null;
 
     void Start()
     {
@@ -69,6 +70,31 @@ public class WaterGun : MonoBehaviour
             // Handle hit logic here
             Debug.Log("Hit: " + hit.collider.name);
             endPosition = hit.point;
+
+            FakeWall fakeWall = hit.collider.GetComponent<FakeWall>(); // Get the FakeWall component
+            if (fakeWall != null)
+            {
+                Debug.Log("Hit FakeWall");
+                fakeWall.Explode(); // Call the Explode method
+            }
+
+            PushableWall pushableWall = hit.collider.GetComponent<PushableWall>(); // Get the PushableWall component
+            if (pushableWall != null)
+            {
+                Debug.Log("Hit PushableWall");
+                pushableWall.Push(direction); // Call the Push method
+                currentPushableWall = pushableWall; // Store the reference to the current pushable wall
+            }
+            else if (currentPushableWall != null)
+            {
+                currentPushableWall.StopPushing(); // Stop pushing the previous wall if a new wall is not hit
+                currentPushableWall = null;
+            }
+        }
+        else if (currentPushableWall != null)
+        {
+            currentPushableWall.StopPushing(); // Stop pushing the wall if nothing is hit
+            currentPushableWall = null;
         }
 
         // Draw the raycast in the scene view
@@ -81,6 +107,12 @@ public class WaterGun : MonoBehaviour
         Debug.Log("Stop shooting");
         isShooting = false;
         animator.SetBool("isShooting", false);
+
+        if (currentPushableWall != null)
+        {
+            currentPushableWall.StopPushing(); // Stop pushing the wall when shooting stops
+            currentPushableWall = null;
+        }
     }
 
     Vector3 GetShootDirection()

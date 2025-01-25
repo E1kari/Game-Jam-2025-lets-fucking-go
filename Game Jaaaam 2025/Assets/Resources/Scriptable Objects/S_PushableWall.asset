@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe1346fe34d3b2543baeba5855e235a7, type: 3}
-  m_Name: S_WaterGun
+  m_Script: {fileID: 11500000, guid: 6919e0c012b917646a3502e7ac78acde, type: 3}
+  m_Name: S_PushableWall
   m_EditorClassIdentifier: 
-  maxWater: 25000
-  range: 2
+  pushSpeed: 2
