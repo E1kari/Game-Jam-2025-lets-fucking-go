@@ -7,18 +7,21 @@ using UnityEngine.SceneManagement;
 
 public class MapToIsland : MonoBehaviour
 {
-    private Rigidbody playerRigidbody;
-    private BoxCollider islandCollider;
     PlayerInput playerInput;
     private S_MapToIsland mapToIsland;
     private bool isTouchingIsland;
+    private SpriteRenderer spriteRenderer;
+    private Sprite mapSprite;
+    private Sprite islandSprite;
 
     private void Start()
     {
         mapToIsland = Resources.Load<S_MapToIsland>("Scriptable Objects/S_MapToIsland");
-        playerRigidbody = GetComponent<Rigidbody>();
+        mapSprite = mapToIsland.mapSprite;
+        islandSprite = mapToIsland.islandSprite;
         playerInput = GetComponent<PlayerInput>();
         isTouchingIsland = false;
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Update()
@@ -37,6 +40,14 @@ public class MapToIsland : MonoBehaviour
             {
                 isTouchingIsland = true;
                 Debug.Log("Player is touching the island");
+
+                if (spriteRenderer.sprite == null)
+                {
+                    Debug.LogError("Sprite Renderer is missing");
+                    return;
+                }
+                spriteRenderer.sprite = islandSprite;
+                Debug.Log("Sprite switched to island sprite. Sprite is now: " + spriteRenderer.sprite.name);
         
                 PrepareJoiningIsland(collider); // Switch to island                 
             }
@@ -53,7 +64,15 @@ public class MapToIsland : MonoBehaviour
             else
             {
                 isTouchingIsland = false;
-                Debug.Log("Player is leaving the island");
+                Debug.Log("Player is touching the island");
+
+                if (spriteRenderer.sprite == null)
+                {
+                    Debug.LogError("Sprite Renderer is missing");
+                    return;
+                }
+                spriteRenderer.sprite = mapSprite;
+                Debug.Log("Sprite switched to map sprite. Sprite is now: " + spriteRenderer.sprite.name);
 
                 PrepareLeavingIsland(collider); // Switch to main
             }
