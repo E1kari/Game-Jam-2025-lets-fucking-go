@@ -1,5 +1,6 @@
 using System.Collections;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,8 @@ public class MapToIsland : MonoBehaviour
     private Transform cameraTransform;
     private new Camera camera;
     PlayerInput playerInput;
+
+    Vector3 targetPosition;
 
     private float elapsedTime = 0f;
     private float totalDuration = 1f;
@@ -88,45 +91,36 @@ public class MapToIsland : MonoBehaviour
     private void ZoomCamera()
     {
         Debug.Log("Zooming camera to the island");
-        StartCoroutine(ZoomCameraLoopCoroutine());
+        StartCoroutine(ZoomCameraCoroutine());
     }
 
-    private IEnumerator ZoomCameraLoopCoroutine()
+private IEnumerator ZoomCameraCoroutine()
+{
+    Transform cameraTransform = transform.Find("Player_Sprite/Camera");
+    Camera camera = cameraTransform.GetComponent<Camera>();
+
+    if (camera != null)
     {
-        while (elapsedTime < totalDuration)
+        Vector3 targetPosition = new Vector3(0, 0.25f, -0.65f);
+        Vector3 startPosition = cameraTransform.localPosition;
+        float elapsedTime = 0f;
+        float zoomDuration = 1f; // 1 second
+
+        while (elapsedTime < zoomDuration)
         {
             elapsedTime += Time.deltaTime;
-            Debug.Log(elapsedTime);
-            yield return StartCoroutine(ZoomCameraCoroutine());
-        }        
+            float t = elapsedTime / zoomDuration;
+            cameraTransform.localPosition = Vector3.Lerp(startPosition, targetPosition, t);
+            yield return null;
+        }
 
+        cameraTransform.localPosition = targetPosition;
         Debug.Log("Finished zooming camera to the island");
     }
-
-    private IEnumerator ZoomCameraCoroutine()
+    else
     {
-        cameraTransform = transform.Find("Player_Sprite/Camera");
-        camera = cameraTransform.GetComponent<Camera>();
-
-        if (camera != null)
-        {
-            while (elapsedTime < totalDuration)
-            {
-                // Adjust the camera's position to zoom in on the player
-                Vector3 newPosition = cameraTransform.position;
-                newPosition.y -= 0.03f; // Adjust the y coordinate to zoom in
-                newPosition.z += 0.02f; // Adjust the z coordinate to zoom in
-                cameraTransform.position = newPosition;
-
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-        }
-        else
-        {
-            Debug.LogError("Camera component is missing");
-        }
-
+        Debug.LogError("Camera component is missing");
+    }
         Debug.Log("Finished zooming camera");
         EnableMovement(); // Enable the player's movement
     }
