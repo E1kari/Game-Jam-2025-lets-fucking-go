@@ -14,7 +14,7 @@ public class WalkingState : BaseState
     Animator animator;
     int direction = 2;
     private int lastDirection = 2;
-
+    public static Vector2 playerDirection;
 
     public void Enter(StateMachine pa_stateMachine)
     {
@@ -37,8 +37,10 @@ public class WalkingState : BaseState
         Vector2 move = moveAction.ReadValue<Vector2>();
         rb.linearVelocity = new Vector3(move.x * playerData.movementSpeed, 0, move.y * playerData.movementSpeed);
 
+        playerDirection = move; // Save the direction the player is facing
+
         animator.SetBool("change direction", false);
-        DetermineDirection();
+        DetermineDirection(move);
 
         if (direction != lastDirection)
         {
@@ -49,28 +51,39 @@ public class WalkingState : BaseState
         }
     }
 
-    public void DetermineDirection()
+    public void DetermineDirection(Vector2 move)
     {
-        float x = rb.linearVelocity.x;
-        float z = rb.linearVelocity.z;
+        float x = move.x;
+        float y = move.y;
 
-        if (x == 0 && z == 0)
+        if (x == 0 && y == 0)
         {
-            direction = 2;
+            direction = 2; // idle
         }
-        else if (Mathf.Abs(x) <= Mathf.Abs(z))
+        else if (Mathf.Abs(x) > Mathf.Abs(y))
         {
-            direction = (z >= 0) ? 0 : 2; // hinten oder vorne
+            direction = (x > 0) ? 1 : 3; // right or left
+        }
+        else if (Mathf.Abs(y) > Mathf.Abs(x))
+        {
+            direction = (y > 0) ? 0 : 2; // up or down
         }
         else
         {
-            direction = (x >= 0) ? 1 : 3; // rechts oder links
+            if (x > 0 && y > 0)
+                direction = 4; // up-right
+            else if (x < 0 && y > 0)
+                direction = 5; // up-left
+            else if (x > 0 && y < 0)
+                direction = 6; // down-right
+            else if (x < 0 && y < 0)
+                direction = 7; // down-left
         }
     }
 
     public void CheckExitConditions()
     {
-        if (moveAction.ReadValue<Vector2>() == new Vector2(0, 0))
+        if (moveAction.ReadValue<Vector2>() == Vector2.zero)
         {
             stateMachine.ChangeState(new IdleState());
         }

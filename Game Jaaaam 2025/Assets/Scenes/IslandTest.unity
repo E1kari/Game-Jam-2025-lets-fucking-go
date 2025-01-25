@@ -216,22 +216,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &171178873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171178851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 945977347a27f5940b8c7d054d43683d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInput: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  isTouchingIsland: 0
-  islandCollider: {fileID: 0}
 --- !u!1001 &320327282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -776,6 +760,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 7165837487665329824, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
+      propertyPath: maxWater
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 8179072453042026733, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -813,9 +801,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4836859639343543709, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       insertIndex: -1
       addedObject: {fileID: 171178866}
-    - targetCorrespondingSourceObject: {fileID: 4836859639343543709, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 171178873}
     - targetCorrespondingSourceObject: {fileID: 4836859639343543709, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       insertIndex: -1
       addedObject: {fileID: 171178872}
