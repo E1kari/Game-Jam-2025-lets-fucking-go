@@ -15,5 +15,5 @@ MonoBehaviour:
   zoomInPos: {x: 0, y: 0.25, z: -0.65}
   zoomOutPos: {x: 0, y: 0.5, z: -1.5}
   zoomDuration: 1
-  mapSprite: {fileID: 794449055, guid: 0eec5e9e92845fd40b3595f753674a20, type: 3}
-  islandSprite: {fileID: -1112487434, guid: 06838f9d1d8aa3043b7709607eaedf29, type: 3}
+  mapAnimator: {fileID: 9100000, guid: 69b36b32939a8514190aa2535402ccc5, type: 2}
+  islandAnimator: {fileID: 9100000, guid: 452ca37f62f47fd4a862e1a0ff8dbeab, type: 2}
