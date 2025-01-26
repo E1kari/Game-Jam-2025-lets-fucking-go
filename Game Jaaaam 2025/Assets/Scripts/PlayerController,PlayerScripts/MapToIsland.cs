@@ -120,7 +120,7 @@ public class MapToIsland : MonoBehaviour
 
     private IEnumerator ZoomInCoroutine()
     {
-        Transform cameraTransform = transform.Find("Character_Sprite/Main Camera");
+        Transform cameraTransform = transform.Find("Player_Sprite/Camera");
         if (cameraTransform == null)
         {
             Debug.LogError("Camera transform is missing");
@@ -156,7 +156,7 @@ public class MapToIsland : MonoBehaviour
 
     private IEnumerator ZoomOutCoroutine()
     {
-        Transform cameraTransform = transform.Find("Character_Sprite/Main Camera");
+        Transform cameraTransform = transform.Find("Player_Sprite/Camera");
         if (cameraTransform == null)
         {
             Debug.LogError("Camera transform is missing");
