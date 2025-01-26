@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: b3301e2886bb8cb4f808792e4924156f
   - enabled: 1
+    path: "Assets/Scenes/Ihr Hurens\xF6hne.unity"
+    guid: 7871ed05ee0856f4b9a8459486c9b5ab
+  - enabled: 0
     path: Assets/Scenes/Greyboxing_Jonas.unity
     guid: a0a2f14e53ca32e4cb0bade3372a8f17
   - enabled: 0
