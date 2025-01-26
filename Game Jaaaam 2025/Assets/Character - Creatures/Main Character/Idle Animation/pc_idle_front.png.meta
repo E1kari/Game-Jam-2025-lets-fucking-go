@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af8f3191c9f4f2845a7b6654e0c11a57
+guid: 3646a15d1998555479c555fd98380793
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,12 +108,100 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: pc_idle_front_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 20
+        width: 356
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2b777881e847945ab75eca01f5525d
+      internalID: 957487229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pc_idle_front_1
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 20
+        width: 363
+        height: 479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a09f5df381c56b4cb086b77946c75e1
+      internalID: 468805217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pc_idle_front_2
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 20
+        width: 356
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d0db43ef6a1ca4292efd9055d979cd
+      internalID: -1470108161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pc_idle_front_3
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 20
+        width: 348
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5986cf7cac18c8f47b1f1c88b2e960ae
+      internalID: 988915747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 22dff3ad28d344641ae04dade38e25a9
     internalID: 0
     vertices: []
     indices: 
@@ -122,7 +210,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pc_idle_front_0: 957487229
+      pc_idle_front_1: 468805217
+      pc_idle_front_2: -1470108161
+      pc_idle_front_3: 988915747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
