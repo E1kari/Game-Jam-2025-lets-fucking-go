@@ -4619,7 +4619,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323956676}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d4d55124eb29e847b9438713dbe8b9d, type: 3}
   m_Name: 
@@ -4636,12 +4636,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 1bb11a8e397d7d349bc54a2dd2a06d85, type: 3}
+  m_Resource: {fileID: 8300000, guid: 1bb11a8e397d7d349bc54a2dd2a06d85, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4730,12 +4730,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323956676}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: f9b5af102db1e7146a7cc306a18fc57e, type: 3}
+  m_Resource: {fileID: 8300000, guid: f9b5af102db1e7146a7cc306a18fc57e, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4828,7 +4828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323956676}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19953,7 +19953,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 554297258065109612, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 554297258065109612, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19961,7 +19961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 554297258065109612, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -4.57
       objectReference: {fileID: 0}
     - target: {fileID: 554297258065109612, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20483,7 +20483,7 @@ SpriteRenderer:
   m_Size: {x: 4.155472, y: 5.7699995}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1293241848
@@ -21200,7 +21200,7 @@ SpriteRenderer:
   m_Size: {x: 17, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1340226501
@@ -26560,7 +26560,7 @@ SpriteRenderer:
   m_Size: {x: 1.96875, y: 1.65625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!65 &1650648770
@@ -27453,7 +27453,7 @@ SpriteRenderer:
   m_Size: {x: 2.8244274, y: 2.851145}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1730685439
