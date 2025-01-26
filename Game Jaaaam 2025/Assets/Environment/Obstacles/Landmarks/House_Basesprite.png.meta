@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec70cee7505dd3248b49fd896cc54b56
+guid: 9bd5d2de079eb5c4c88ce099a467a5cd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 262
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,19 +93,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -125,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dea0f2ef4d1feac4192825bea4279d6e
-      internalID: -170746686
+      spriteID: 8e597988c574e7f4ebbdffd625d534e4
+      internalID: 867114400
       vertices: []
       indices: 
       edges: []
@@ -135,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6e95aa839f28b6e459e5b6a6e21dd260
+    spriteID: 291c8c8306fab8e40a80bd66d48e7133
     internalID: 0
     vertices: []
     indices: 
@@ -145,7 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      House_Basesprite_0: -170746686
+      House_Basesprite_0: 867114400
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
