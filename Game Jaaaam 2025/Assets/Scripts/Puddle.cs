@@ -24,7 +24,7 @@ public class Puddle : MonoBehaviour
         
         if (IsCompletelyInPuddle(GetComponent<Collider>(), other))
         {
-            Debug.Log("Puddle OnTriggerEnter");
+            Debug.Log("PushableWall is in the puddle");
             Debug.Log("PushableWall: " + pushableWall);
 
             if (pushableWall != null)
@@ -41,7 +41,7 @@ public class Puddle : MonoBehaviour
         
         if (IsCompletelyInPuddle(GetComponent<Collider>(), other))
         {
-            Debug.Log("Puddle OnTriggerStay");
+            Debug.Log("PushableWall is in the puddle");
             Debug.Log("PushableWall: " + pushableWall);
 
             if (pushableWall != null)
