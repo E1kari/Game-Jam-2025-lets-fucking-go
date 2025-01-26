@@ -5,6 +5,7 @@ public class ApplyMaterialToSprites : EditorWindow
 {
     private Material materialToApply;
 
+
     [MenuItem("Tools/Apply Material to Untagged Sprites")]
     public static void ShowWindow()
     {
@@ -31,7 +32,7 @@ public class ApplyMaterialToSprites : EditorWindow
 
     private void ApplyMaterialToUntaggedSprites()
     {
-        SpriteRenderer[] spriteRenderers = FindObjectsOfType<SpriteRenderer>();
+        SpriteRenderer[] spriteRenderers = FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None);
         int count = 0;
 
         foreach (SpriteRenderer sr in spriteRenderers)
