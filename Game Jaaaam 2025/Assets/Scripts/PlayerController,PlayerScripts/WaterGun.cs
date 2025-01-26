@@ -20,7 +20,6 @@ public class WaterGun : MonoBehaviour
     Vector3 particlePositionModifier = new Vector3(0,0,0);
     GameObject currentWaterParticle;
 
-
     void Start()
     {
         s_WaterGun = Resources.Load<S_WaterGun>("Scriptable Objects/S_WaterGun");
@@ -182,21 +181,36 @@ public class WaterGun : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Water"))
-        {
-            RegenerateWater();
-        }
-    }
-
-    private void RegenerateWater()
+    public void RegenerateWater()
     {
         currentWater += waterRegenAmount;
         if (currentWater > maxWater)
         {
             currentWater = maxWater;
         }
-        //Debug.Log("Regenerated water. Current water: " + currentWater);
+        if (currentWater >= maxWater)
+        {
+            Debug.Log("Water is full. Current water: " + currentWater);
+        }
+        else
+        {
+            Debug.Log("Regenerated water. Current water: " + currentWater);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Puddle"))
+        {
+            RegenerateWater();
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Puddle"))
+        {
+            RegenerateWater();
+        }
     }
 }
