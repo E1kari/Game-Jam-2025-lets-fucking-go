@@ -1,0 +1,531 @@
+fileFormatVersion: 2
+guid: bcc7731baccea4f49968c1313a0ee32d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2048
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4fa2e683bb2394ca5a64355640fac1
+      internalID: 1883057432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7be3da8d7db53c4a811f8a9b12e1b4d
+      internalID: -740854691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160e1c6234b4a7a4f9eec19dab3c24e2
+      internalID: 626437647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec797343b03c67e489f7eba1f405217b
+      internalID: 1552689538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 0
+        width: 358
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d805610061ad64193deb558eabb174
+      internalID: 1256029027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2644
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4956307ede388c04c829cb18ddeb8d91
+      internalID: 2096560600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 3157
+        y: 0
+        width: 355
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a99ec76d8743a44ac5495401426bd8
+      internalID: -1283879791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 3665
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21040b23838e2ca40b4387b028414f93
+      internalID: -268245808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 4178
+        y: 0
+        width: 358
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1df231366762a74d94db183403e1743
+      internalID: -1240308744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 4687
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d3921607a7968428966483b9090b27
+      internalID: 214748032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 0
+        width: 355
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33748f8bb8b93c4780b387239f501a2
+      internalID: 963797188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 5708
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571e0c61cce60414092e36de3a78c954
+      internalID: 1622662358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 6221
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20435d43f975cf84daaacc2d7d299694
+      internalID: 379134763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 6734
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7a975ddb22a65458ae7806d7a9b2ac
+      internalID: 1900107884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 7247
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62516f8964d01bd458d847ceaf993652
+      internalID: -182567213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 7760
+        y: 0
+        width: 358
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35110291a6d5dd34d897bbebb1d92456
+      internalID: -1724502337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 8273
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027f6b737cffaee49926a43761ded0ca
+      internalID: 799450540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat_Ani_Front_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 8786
+        y: 0
+        width: 360
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807bc630420486144906681c0d3a0316
+      internalID: 452562040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d26f5959adabe454891c83fe7047f660
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Boat_Ani_Front_SpriteSheet_0: 1883057432
+      Boat_Ani_Front_SpriteSheet_1: -740854691
+      Boat_Ani_Front_SpriteSheet_10: 963797188
+      Boat_Ani_Front_SpriteSheet_11: 1622662358
+      Boat_Ani_Front_SpriteSheet_12: 379134763
+      Boat_Ani_Front_SpriteSheet_13: 1900107884
+      Boat_Ani_Front_SpriteSheet_14: -182567213
+      Boat_Ani_Front_SpriteSheet_15: -1724502337
+      Boat_Ani_Front_SpriteSheet_16: 799450540
+      Boat_Ani_Front_SpriteSheet_17: 452562040
+      Boat_Ani_Front_SpriteSheet_2: 626437647
+      Boat_Ani_Front_SpriteSheet_3: 1552689538
+      Boat_Ani_Front_SpriteSheet_4: 1256029027
+      Boat_Ani_Front_SpriteSheet_5: 2096560600
+      Boat_Ani_Front_SpriteSheet_6: -1283879791
+      Boat_Ani_Front_SpriteSheet_7: -268245808
+      Boat_Ani_Front_SpriteSheet_8: -1240308744
+      Boat_Ani_Front_SpriteSheet_9: 214748032
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
