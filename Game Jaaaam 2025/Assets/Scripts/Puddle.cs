@@ -1,30 +1,28 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(Rigidbody))]
 public class Puddle : MonoBehaviour
 {
+    private void Awake()
+    {
+        // Ensure the BoxCollider is set as a trigger
+        BoxCollider boxCollider = GetComponent<BoxCollider>();
+        boxCollider.isTrigger = true;
+
+        // Ensure the Rigidbody is set to kinematic
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.isKinematic = true;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         GameObject otherGameObject = other.gameObject;
         PushableWall pushableWall = otherGameObject.GetComponent<PushableWall>();
 
-        if (other.CompareTag("Player"))
-        {
-            // Prevent player movement
-            StateMachine stateMachine = other.GetComponent<StateMachine>();
-            if (stateMachine != null)
-            {
-                WalkingState walkingState = stateMachine.GetCurrentState() as WalkingState;
-                if (walkingState != null)
-                {
-                    walkingState.DisableMovement();
-                }
-            }
-        }
-        
         if (IsCompletelyInPuddle(GetComponent<Collider>(), other))
         {
-            Debug.Log("PushableWall is in the puddle");
             Debug.Log("PushableWall: " + pushableWall);
 
             if (pushableWall != null)
@@ -35,15 +33,12 @@ public class Puddle : MonoBehaviour
     }
 
     private void OnTriggerStay(Collider other)
-    {   
+    {
         GameObject otherGameObject = other.gameObject;
         PushableWall pushableWall = otherGameObject.GetComponent<PushableWall>();
-        
+
         if (IsCompletelyInPuddle(GetComponent<Collider>(), other))
         {
-            Debug.Log("PushableWall is in the puddle");
-            Debug.Log("PushableWall: " + pushableWall);
-
             if (pushableWall != null)
             {
                 pushableWall.StartFallingIntoPuddle();
@@ -57,20 +52,6 @@ public class Puddle : MonoBehaviour
         PushableWall pushableWall = otherGameObject.GetComponent<PushableWall>();
         Debug.Log("PushableWall: " + pushableWall);
 
-        if (other.CompareTag("Player"))
-        {
-            // Re-enable player movement
-            StateMachine stateMachine = other.GetComponent<StateMachine>();
-            if (stateMachine != null)
-            {
-                WalkingState walkingState = stateMachine.GetCurrentState() as WalkingState;
-                if (walkingState != null)
-                {
-                    walkingState.EnableMovement();
-                }
-            }
-        }
-        
         if (pushableWall != null)
         {
             pushableWall.DestroyWall();
