@@ -134,9 +134,14 @@ public class MapToIsland : MonoBehaviour
 
     private IEnumerator ZoomInCoroutine()
     {
-        Transform cameraTransform = transform.Find("Player_Sprite/Camera");
-        Camera camera = cameraTransform.GetComponent<Camera>();
+        Transform cameraTransform = transform.Find("Character_Sprite/Main Camera");
+        if (cameraTransform == null)
+        {
+            Debug.LogError("Camera transform is missing");
+            yield break;
+        }
 
+        Camera camera = cameraTransform.GetComponent<Camera>();
         if (camera != null)
         {
             Vector3 targetPosition = mapToIsland.zoomInPos;
@@ -165,9 +170,14 @@ public class MapToIsland : MonoBehaviour
 
     private IEnumerator ZoomOutCoroutine()
     {
-        Transform cameraTransform = transform.Find("Player_Sprite/Camera");
-        Camera camera = cameraTransform.GetComponent<Camera>();
+        Transform cameraTransform = transform.Find("Character_Sprite/Main Camera");
+        if (cameraTransform == null)
+        {
+            Debug.LogError("Camera transform is missing");
+            yield break;
+        }
 
+        Camera camera = cameraTransform.GetComponent<Camera>();
         if (camera != null)
         {
             Vector3 targetPosition = mapToIsland.zoomOutPos;

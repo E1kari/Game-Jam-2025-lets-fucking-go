@@ -16,3 +16,4 @@ MonoBehaviour:
   range: 2
   waterRegenAmount: 20
   waterParticlePrefab: {fileID: 2330312493239763128, guid: 4f10112c052db7b4ea0ba703ab51bedd, type: 3}
+  waterGunPosition: {x: 0.05, y: 0, z: 0}

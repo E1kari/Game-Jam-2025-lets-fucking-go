@@ -6,16 +6,16 @@ TagManager:
   tags:
   - Island
   - Water
+  - Ocean
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
   - Partikel
-  - Player
   - Water
   - UI
-  - 
-  - 
+  - UI
+  - Player
   - 
   - 
   - 

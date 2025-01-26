@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,19 +10,26 @@ public class WaterGun : MonoBehaviour
     private bool isShooting = false;
     PlayerInput playerInput;
     InputAction shootAction;
-    private Animator animator;
     private PushableWall currentPushableWall = null;
     private GameObject waterParticlePrefab;
-    private GameObject waterParticles;
+    private int waterRegenAmount;
+    private int maxWater;
+    private Vector3 shootDirection;
+    private Vector3 direction;
+    Vector3 particlePosition;
+    Vector3 particlePositionModifier = new Vector3(0,0,0);
+    GameObject currentWaterParticle;
+
 
     void Start()
     {
         s_WaterGun = Resources.Load<S_WaterGun>("Scriptable Objects/S_WaterGun");
         currentWater = s_WaterGun.maxWater;
+        waterRegenAmount = s_WaterGun.waterRegenAmount;
         waterParticlePrefab = s_WaterGun.waterParticlePrefab;
+        maxWater = s_WaterGun.maxWater;
         playerInput = GetComponent<PlayerInput>();
         shootAction = playerInput.actions["Shoot"];
-        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -55,15 +63,7 @@ public class WaterGun : MonoBehaviour
     void StartShooting()
     {
         isShooting = true;
-        animator.SetBool("isShooting", true);
-
-        // Instantiate the water particle effect
-        if (waterParticlePrefab != null && waterParticles == null)
-        {
-            Vector3 startPosition = transform.position;
-            Vector3 direction = GetShootDirection();
-            waterParticles = Instantiate(waterParticlePrefab, startPosition, Quaternion.LookRotation(direction));
-        }
+        direction = GetShootDirection();
     }
 
     void Shoot()
@@ -78,65 +78,65 @@ public class WaterGun : MonoBehaviour
 
         if (Physics.Raycast(startPosition, direction, out hit, s_WaterGun.range)) // Check if the raycast hits something
         {
-            // Handle hit logic here
             Debug.Log("Hit: " + hit.collider.name);
             endPosition = hit.point;
 
-            FakeWall fakeWall = hit.collider.GetComponent<FakeWall>(); // Get the FakeWall component
+            // Handle FakeWall and PushableWall as before
+            FakeWall fakeWall = hit.collider.GetComponent<FakeWall>();
             if (fakeWall != null)
             {
-                Debug.Log("Hit FakeWall");
-                fakeWall.Explode(); // Call the Explode method
+                fakeWall.Explode();
             }
 
-            PushableWall pushableWall = hit.collider.GetComponent<PushableWall>(); // Get the PushableWall component
+            PushableWall pushableWall = hit.collider.GetComponent<PushableWall>();
             if (pushableWall != null)
             {
-                Debug.Log("Hit PushableWall");
-                pushableWall.Push(direction); // Call the Push method
-                currentPushableWall = pushableWall; // Store the reference to the current pushable wall
+                pushableWall.Push(direction);
+                currentPushableWall = pushableWall;
             }
             else if (currentPushableWall != null)
             {
-                currentPushableWall.StopPushing(); // Stop pushing the previous wall if a new wall is not hit
+                currentPushableWall.StopPushing();
                 currentPushableWall = null;
             }
         }
         else if (currentPushableWall != null)
         {
-            currentPushableWall.StopPushing(); // Stop pushing the wall if nothing is hit
+            currentPushableWall.StopPushing();
             currentPushableWall = null;
         }
 
+        // Instantiate and manage water particles
+        particlePosition = startPosition + direction - particlePositionModifier;
+        if (currentWaterParticle != null)
+        {
+            Destroy(currentWaterParticle); // Destroy the previous particles
+        }
+
+        currentWaterParticle = Instantiate(waterParticlePrefab, particlePosition, Quaternion.LookRotation(direction));
+        Debug.Log("Particle position: " + particlePosition);
+
         // Draw the raycast in the scene view
         Debug.DrawLine(startPosition, endPosition, Color.blue, 0.1f);
-        Debug.Log("Shooting water in direction: " + direction + " at position: " + endPosition  + " with remaining water: " + currentWater);
-
-        // Update the particle effect position and rotation
-        if (waterParticles != null)
-        {
-            waterParticles.transform.position = startPosition;
-            waterParticles.transform.rotation = Quaternion.LookRotation(direction);
-        }
+        Debug.Log("Shooting water in direction: " + direction + " at position: " + endPosition + " with remaining water: " + currentWater);
     }
 
     void StopShooting()
     {
         Debug.Log("Stop shooting");
         isShooting = false;
-        animator.SetBool("isShooting", false);
 
         if (currentPushableWall != null)
         {
-            currentPushableWall.StopPushing(); // Stop pushing the wall when shooting stops
+            currentPushableWall.StopPushing();
             currentPushableWall = null;
         }
 
         // Destroy the water particle effect
-        if (waterParticles != null)
+        if (currentWaterParticle != null)
         {
-            Destroy(waterParticles);
-            waterParticles = null;
+            Destroy(currentWaterParticle);
+            currentWaterParticle = null;
         }
     }
 
@@ -155,11 +155,13 @@ public class WaterGun : MonoBehaviour
             if (moveDirection.x > 0)
             {
                 Debug.Log("Shooting right");
+                particlePositionModifier = new Vector3(0.5f, 0, 0);
                 return Vector3.right; // Right
             }
             else
             {
                 Debug.Log("Shooting left");
+                particlePositionModifier = new Vector3(-0.75f, 0, 0);
                 return Vector3.left; // Left
             }
         }
@@ -168,11 +170,13 @@ public class WaterGun : MonoBehaviour
             if (moveDirection.y > 0)
             {
                 Debug.Log("Shooting up");
+                particlePositionModifier = new Vector3(-0.1f, 0, 0.5f);
                 return Vector3.forward; // Forward
             }
             else
             {
                 Debug.Log("Shooting down");
+                particlePositionModifier = new Vector3(-0.1f, 0.5f, -0.5f);
                 return Vector3.back; // Back
             }
         }
@@ -188,10 +192,10 @@ public class WaterGun : MonoBehaviour
 
     private void RegenerateWater()
     {
-        currentWater += s_WaterGun.waterRegenAmount;
-        if (currentWater > s_WaterGun.maxWater)
+        currentWater += waterRegenAmount;
+        if (currentWater > maxWater)
         {
-            currentWater = s_WaterGun.maxWater;
+            currentWater = maxWater;
         }
         //Debug.Log("Regenerated water. Current water: " + currentWater);
     }
