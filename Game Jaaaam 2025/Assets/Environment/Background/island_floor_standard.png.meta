@@ -1,16 +1,12 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Game Jaaaam 2025/Assets/Environment/Background/island_floor_standard.png.meta
 guid: 2c412c83b692df244b04e92da7dcbfa8
-========
-guid: 40abb69c36bd9784a8d1f3a8bfd8358b
->>>>>>>> 748e0c33c47ae52f0b6a027e27da0453adad0df8:Game Jaaaam 2025/Assets/Environment/Background/island_floor_corner_lower_left.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -44,25 +40,21 @@ TextureImporter:
     wrapU: 1
     wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<<< HEAD:Game Jaaaam 2025/Assets/Environment/Background/island_floor_standard.png.meta
   spriteMode: 2
-========
-  spriteMode: 0
->>>>>>>> 748e0c33c47ae52f0b6a027e27da0453adad0df8:Game Jaaaam 2025/Assets/Environment/Background/island_floor_corner_lower_left.png.meta
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -71,9 +63,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
@@ -93,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +108,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<<< HEAD:Game Jaaaam 2025/Assets/Environment/Background/island_floor_standard.png.meta
     sprites:
     - serializedVersion: 2
       name: island_floor_standard_0
@@ -134,24 +125,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1ce35576bf2ea24787227ba9f4b62f0
-      internalID: -307719469
+      spriteID: 629ce97810e6d464d93d28b43b4b979b
+      internalID: -919361387
       vertices: []
       indices: 
       edges: []
       weights: []
-========
-    sprites: []
->>>>>>>> 748e0c33c47ae52f0b6a027e27da0453adad0df8:Game Jaaaam 2025/Assets/Environment/Background/island_floor_corner_lower_left.png.meta
     outline: []
     customData: 
     physicsShape: []
     bones: []
-<<<<<<<< HEAD:Game Jaaaam 2025/Assets/Environment/Background/island_floor_standard.png.meta
-    spriteID: 8e747380b45c5ae4a917402b2cb42905
-========
-    spriteID: 
->>>>>>>> 748e0c33c47ae52f0b6a027e27da0453adad0df8:Game Jaaaam 2025/Assets/Environment/Background/island_floor_corner_lower_left.png.meta
+    spriteID: d65cc8bc573f9874daa5d5f056f91013
     internalID: 0
     vertices: []
     indices: 
@@ -160,12 +144,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-<<<<<<<< HEAD:Game Jaaaam 2025/Assets/Environment/Background/island_floor_standard.png.meta
     nameFileIdTable:
-      island_floor_standard_0: -307719469
-========
-    nameFileIdTable: {}
->>>>>>>> 748e0c33c47ae52f0b6a027e27da0453adad0df8:Game Jaaaam 2025/Assets/Environment/Background/island_floor_corner_lower_left.png.meta
+      island_floor_standard_0: -919361387
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
