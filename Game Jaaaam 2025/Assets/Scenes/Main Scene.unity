@@ -4624,8 +4624,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d4d55124eb29e847b9438713dbe8b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstAudioSource: {fileID: 0}
-  secondAudioSource: {fileID: 0}
+  firstAudioSource: {fileID: 323956679}
+  secondAudioSource: {fileID: 323956678}
 --- !u!82 &323956678
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4638,7 +4638,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4738,7 +4738,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
