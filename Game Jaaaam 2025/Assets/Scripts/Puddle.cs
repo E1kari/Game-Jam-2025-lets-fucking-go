@@ -14,6 +14,11 @@ public class Puddle : MonoBehaviour
         // Ensure the Rigidbody is set to kinematic
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
+
+        // Add a non-trigger collider to block the player's movement
+        BoxCollider blockingCollider = gameObject.AddComponent<BoxCollider>();
+        blockingCollider.isTrigger = false;
+        blockingCollider.size = boxCollider.size;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,7 +26,7 @@ public class Puddle : MonoBehaviour
         GameObject otherGameObject = other.gameObject;
         PushableWall pushableWall = otherGameObject.GetComponent<PushableWall>();
 
-        if (IsCompletelyInPuddle(GetComponent<Collider>(), other))
+        if (IsHalfInPuddle(GetComponent<Collider>(), other))
         {
             Debug.Log("PushableWall: " + pushableWall);
 
@@ -37,7 +42,7 @@ public class Puddle : MonoBehaviour
         GameObject otherGameObject = other.gameObject;
         PushableWall pushableWall = otherGameObject.GetComponent<PushableWall>();
 
-        if (IsCompletelyInPuddle(GetComponent<Collider>(), other))
+        if (IsHalfInPuddle(GetComponent<Collider>(), other))
         {
             if (pushableWall != null)
             {
@@ -58,16 +63,24 @@ public class Puddle : MonoBehaviour
         }
     }
 
-    private static bool IsCompletelyInPuddle(Collider puddleCollider, Collider objectCollider)
+    private static bool IsHalfInPuddle(Collider puddleCollider, Collider objectCollider)
     {
         // Get bounds of both the puddle and the object
         Bounds puddleBounds = puddleCollider.bounds;
         Bounds objectBounds = objectCollider.bounds;
 
-        // Check if the center of the object is within the puddle bounds
-        Vector3 objectCenter = objectBounds.center;
-        bool isCenterWithinBounds = puddleBounds.Contains(objectCenter);
+        // Calculate the intersection bounds
+        Bounds intersectionBounds = new Bounds();
+        intersectionBounds.SetMinMax(
+            Vector3.Max(puddleBounds.min, objectBounds.min),
+            Vector3.Min(puddleBounds.max, objectBounds.max)
+        );
 
-        return isCenterWithinBounds;
+        // Calculate the area of the intersection and the object
+        float intersectionArea = intersectionBounds.size.x * intersectionBounds.size.z;
+        float objectArea = objectBounds.size.x * objectBounds.size.z;
+
+        // Check if the intersection area is at least 50% of the object area
+        return intersectionArea >= 0.5f * objectArea;
     }
 }
