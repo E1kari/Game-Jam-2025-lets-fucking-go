@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a54fd55cd0429e5468e2f86136cda36c
+guid: f612b40d609c5dd4bad7993e2afbdd1b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 320
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: island_floor_one_tile_hole_0
+      name: wall_vertical_loop_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
+        width: 56
         height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -125,8 +125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9e0b4aa0aa551e4497aac8714e8d593
-      internalID: -31391609
+      spriteID: 8272ef1c2b20b0143b532e94a2c04615
+      internalID: -407879321
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f3a036b7c937155498bd1e81e33fd548
+    spriteID: 206ed7112a7970e49bcc808e72b01a94
     internalID: 0
     vertices: []
     indices: 
@@ -145,7 +145,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      island_floor_one_tile_hole_0: -31391609
+      wall_vertical_loop_0: -407879321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
