@@ -80,7 +80,8 @@ public class WalkingState : BaseState
         }
         if (spriteAnimator.runtimeAnimatorController == mapAnimator)
         {
-
+            // Change the direction the map sprite looks by rotating it
+            RotateMapSprite(direction);
         }
     }
 
@@ -130,8 +131,43 @@ public class WalkingState : BaseState
         }
         if (spriteAnimator.runtimeAnimatorController == mapAnimator)
         {
-
+        
         }
+    }
+
+    private void RotateMapSprite(int direction)
+    {
+        float playerRotationY = stateMachine.gameObject.transform.rotation.eulerAngles.y;
+
+        switch (direction)
+        {
+            case 0: // up
+                playerRotationY = 0f;
+                break;
+            case 1: // right
+                playerRotationY = 90f;
+                break;
+            case 2: // down
+                playerRotationY = 180f;
+                break;
+            case 3: // left
+                playerRotationY = -90f;
+                break;
+            case 4: // up-right
+                playerRotationY = 45f;
+                break;
+            case 5: // up-left
+                playerRotationY = -45f;
+                break;
+            case 6: // down-right
+                playerRotationY = 135f;
+                break;
+            case 7: // down-left
+                playerRotationY = -135f;
+                break;
+        }
+
+        stateMachine.gameObject.transform.rotation = Quaternion.Euler(0, playerRotationY, 0);
     }
 
     public StateType GetStateType()
