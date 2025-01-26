@@ -13,9 +13,9 @@ public class S_MapToIsland : ScriptableObject
     [Tooltip("The duration of the camera zoom. The lower the value, the faster the camera will zoom in.")]
     public float zoomDuration = 1f; // 1 second
 
-    [Header("Sprite Settings")]
-    [Tooltip("The sprite that will be displayed on the map.")]
-    public Sprite mapSprite;
-    [Tooltip("The sprite that will be displayed on the island.")]
-    public Sprite islandSprite;
+    [Header("Animator Settings")]
+    [Tooltip("The Animator that will be displayed on the map.")]
+    public RuntimeAnimatorController mapAnimator;
+    [Tooltip("The Animator that will be displayed on the island.")]
+    public RuntimeAnimatorController islandAnimator;
 }

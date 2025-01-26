@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -10,18 +11,18 @@ public class MapToIsland : MonoBehaviour
     PlayerInput playerInput;
     private S_MapToIsland mapToIsland;
     private bool isTouchingIsland;
-    private SpriteRenderer spriteRenderer;
-    private Sprite mapSprite;
-    private Sprite islandSprite;
+    private RuntimeAnimatorController mapAnimator;
+    private RuntimeAnimatorController islandAnimator;
+    private Animator spriteAnimator;
 
     private void Start()
     {
         mapToIsland = Resources.Load<S_MapToIsland>("Scriptable Objects/S_MapToIsland");
-        mapSprite = mapToIsland.mapSprite;
-        islandSprite = mapToIsland.islandSprite;
+        mapAnimator = mapToIsland.mapAnimator;
+        islandAnimator = mapToIsland.islandAnimator;
         playerInput = GetComponent<PlayerInput>();
         isTouchingIsland = false;
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        spriteAnimator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -36,21 +37,13 @@ public class MapToIsland : MonoBehaviour
             {
                 return;
             }
-            else
-            {
-                isTouchingIsland = true;
-                Debug.Log("Player is touching the island");
 
-                if (spriteRenderer.sprite == null)
-                {
-                    Debug.LogError("Sprite Renderer is missing");
-                    return;
-                }
-                spriteRenderer.sprite = islandSprite;
-                Debug.Log("Sprite switched to island sprite. Sprite is now: " + spriteRenderer.sprite.name);
-        
-                PrepareJoiningIsland(collider); // Switch to island                 
-            }
+            isTouchingIsland = true;
+            Debug.Log("Player is touching the island.");
+
+            spriteAnimator.runtimeAnimatorController = islandAnimator;
+            Debug.Log("Sprite switched to island Animator. Animator is now: " + spriteAnimator);
+            PrepareJoiningIsland(collider); // Switch to island                 
         }
     }
     private void OnTriggerExit(Collider collider)
@@ -61,21 +54,14 @@ public class MapToIsland : MonoBehaviour
             {
                 return;
             }
-            else
-            {
-                isTouchingIsland = false;
-                Debug.Log("Player is touching the island");
 
-                if (spriteRenderer.sprite == null)
-                {
-                    Debug.LogError("Sprite Renderer is missing");
-                    return;
-                }
-                spriteRenderer.sprite = mapSprite;
-                Debug.Log("Sprite switched to map sprite. Sprite is now: " + spriteRenderer.sprite.name);
+            isTouchingIsland = false;
+            Debug.Log("Player is touching the island");
 
-                PrepareLeavingIsland(collider); // Switch to main
-            }
+            spriteAnimator.runtimeAnimatorController = mapAnimator;
+            Debug.Log("Sprite switched to map Animator. Animator is now: " + spriteAnimator);
+
+            PrepareLeavingIsland(collider); // Switch to main
         }
     }
 

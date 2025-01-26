@@ -2150,6 +2150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_standard_5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1932868852868262601, guid: 18c3e7af128a050478bb854163653980, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4874,6 +4878,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_corner_lower_right (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5136392777084533419, guid: baa0ad942713314478e76fac0185145b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6710618935416523207, guid: baa0ad942713314478e76fac0185145b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.11111112
@@ -5712,6 +5720,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 333575442}
+  - component: {fileID: 333575443}
   m_Layer: 0
   m_Name: island_2
   m_TagString: Island
@@ -5785,6 +5794,27 @@ Transform:
   - {fileID: 1263914450}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &333575443
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333575441}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &338474289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6027,6 +6057,10 @@ PrefabInstance:
     - target: {fileID: 8273993826063562594, guid: f7347ff365b57bf4e8b1def7270bb70f, type: 3}
       propertyPath: m_Name
       value: island_floor_corner_upper_right
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273993826063562594, guid: f7347ff365b57bf4e8b1def7270bb70f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6559,6 +6593,10 @@ PrefabInstance:
     - target: {fileID: 8625376862904129127, guid: a732a48c903a98444982225810eef53b, type: 3}
       propertyPath: m_Name
       value: island_floor_corner_upper_left (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625376862904129127, guid: a732a48c903a98444982225810eef53b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7966,6 +8004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_corner_lower_left
       objectReference: {fileID: 0}
+    - target: {fileID: 4258813191824577070, guid: ebbe89528d7b2c34f9a0d6cb54275246, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5961355571324737244, guid: ebbe89528d7b2c34f9a0d6cb54275246, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.11111112
@@ -8788,6 +8830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_corner_lower_right_inverted
       objectReference: {fileID: 0}
+    - target: {fileID: 8362294657959573893, guid: 1a506c5cc9cde8840b09e6530d51a484, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8524681555362986111, guid: 1a506c5cc9cde8840b09e6530d51a484, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.11111112
@@ -9395,6 +9441,10 @@ PrefabInstance:
     - target: {fileID: 5136392777084533419, guid: baa0ad942713314478e76fac0185145b, type: 3}
       propertyPath: m_Name
       value: island_floor_corner_lower_right (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136392777084533419, guid: baa0ad942713314478e76fac0185145b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6710618935416523207, guid: baa0ad942713314478e76fac0185145b, type: 3}
       propertyPath: m_LocalScale.x
@@ -10962,6 +11012,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_corner_upper_left
       objectReference: {fileID: 0}
+    - target: {fileID: 8625376862904129127, guid: a732a48c903a98444982225810eef53b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12049,6 +12103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 704199991}
+  - component: {fileID: 704199992}
   m_Layer: 0
   m_Name: island_0
   m_TagString: Island
@@ -12081,6 +12136,27 @@ Transform:
   - {fileID: 1729938388}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &704199992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704199989}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &704753209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3908986161760238944, guid: 22549198c8c33954c98572a081062f20, type: 3}
@@ -15185,6 +15261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_standard_5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1932868852868262601, guid: 18c3e7af128a050478bb854163653980, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15209,7 +15289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 554297258065109612, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.001
+      value: 24.65
       objectReference: {fileID: 0}
     - target: {fileID: 554297258065109612, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15217,7 +15297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 554297258065109612, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.567
+      value: 7.23
       objectReference: {fileID: 0}
     - target: {fileID: 554297258065109612, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15263,7 +15343,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8177115268303588092, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8177115268303588092, guid: 3aabec92986f0e84eb05b611d7eed317, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16399,6 +16484,10 @@ PrefabInstance:
     - target: {fileID: 8273993826063562594, guid: f7347ff365b57bf4e8b1def7270bb70f, type: 3}
       propertyPath: m_Name
       value: island_floor_corner_upper_right
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273993826063562594, guid: f7347ff365b57bf4e8b1def7270bb70f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20169,6 +20258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_standard_5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1932868852868262601, guid: 18c3e7af128a050478bb854163653980, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20829,6 +20922,10 @@ PrefabInstance:
     - target: {fileID: 3605545638225866026, guid: e89d6ccba2a07f8409c682af5e2b481d, type: 3}
       propertyPath: m_Name
       value: island_floor_corner_upper_left_inverted
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605545638225866026, guid: e89d6ccba2a07f8409c682af5e2b481d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7927592483592564590, guid: e89d6ccba2a07f8409c682af5e2b481d, type: 3}
       propertyPath: m_LocalScale.x
@@ -22775,7 +22872,7 @@ SpriteRenderer:
   m_Size: {x: 4.155472, y: 5.7699995}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1293241848
@@ -26675,6 +26772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_corner_lower_left_inverted
       objectReference: {fileID: 0}
+    - target: {fileID: 4051479302790216850, guid: b41a888ad7b36b948aa6fe1a9ba41eab, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5723183835028386390, guid: b41a888ad7b36b948aa6fe1a9ba41eab, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.11111112
@@ -28482,7 +28583,7 @@ SpriteRenderer:
   m_Size: {x: 1.96875, y: 1.65625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!65 &1650648770
@@ -30211,7 +30312,7 @@ SpriteRenderer:
   m_Size: {x: 2.8244274, y: 2.851145}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1730685439
@@ -31929,6 +32030,10 @@ PrefabInstance:
     - target: {fileID: 8625376862904129127, guid: a732a48c903a98444982225810eef53b, type: 3}
       propertyPath: m_Name
       value: island_floor_corner_upper_left
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625376862904129127, guid: a732a48c903a98444982225810eef53b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34371,6 +34476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_corner_upper_right_inverted
       objectReference: {fileID: 0}
+    - target: {fileID: 3282923302065854574, guid: cb41afb65728d9843b58186a6e2325d3, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8190751841448531283, guid: cb41afb65728d9843b58186a6e2325d3, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.11111112
@@ -34440,6 +34549,10 @@ PrefabInstance:
     - target: {fileID: 5136392777084533419, guid: baa0ad942713314478e76fac0185145b, type: 3}
       propertyPath: m_Name
       value: island_floor_corner_lower_right
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136392777084533419, guid: baa0ad942713314478e76fac0185145b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6710618935416523207, guid: baa0ad942713314478e76fac0185145b, type: 3}
       propertyPath: m_LocalScale.x
@@ -34589,6 +34702,10 @@ PrefabInstance:
     - target: {fileID: 4258813191824577070, guid: ebbe89528d7b2c34f9a0d6cb54275246, type: 3}
       propertyPath: m_Name
       value: island_floor_corner_lower_left (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258813191824577070, guid: ebbe89528d7b2c34f9a0d6cb54275246, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5961355571324737244, guid: ebbe89528d7b2c34f9a0d6cb54275246, type: 3}
       propertyPath: m_LocalScale.x
@@ -34902,6 +35019,10 @@ PrefabInstance:
     - target: {fileID: 4258813191824577070, guid: ebbe89528d7b2c34f9a0d6cb54275246, type: 3}
       propertyPath: m_Name
       value: island_floor_corner_lower_left
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258813191824577070, guid: ebbe89528d7b2c34f9a0d6cb54275246, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5961355571324737244, guid: ebbe89528d7b2c34f9a0d6cb54275246, type: 3}
       propertyPath: m_LocalScale.x
@@ -35659,6 +35780,10 @@ PrefabInstance:
     - target: {fileID: 8273993826063562594, guid: f7347ff365b57bf4e8b1def7270bb70f, type: 3}
       propertyPath: m_Name
       value: island_floor_corner_upper_right (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273993826063562594, guid: f7347ff365b57bf4e8b1def7270bb70f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37199,6 +37324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_side_up_5
       objectReference: {fileID: 0}
+    - target: {fileID: 6745587842676536196, guid: 2d46f7522b813694dad0729e01094d58, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7287038516983409513, guid: 2d46f7522b813694dad0729e01094d58, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.11111112
@@ -37517,6 +37646,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_side_up_7
       objectReference: {fileID: 0}
+    - target: {fileID: 6033585317770277566, guid: fc48b4de6c9ef824bb0044a16d2a9603, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6397439461129894935, guid: fc48b4de6c9ef824bb0044a16d2a9603, type: 3}
       propertyPath: m_Size.x
       value: 7
@@ -37537,6 +37670,10 @@ PrefabInstance:
     - target: {fileID: 6194723833548142125, guid: 5233b7cb731118443a2ad1ad547ec5ba, type: 3}
       propertyPath: m_Name
       value: island_floor_standard_5x5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194723833548142125, guid: 5233b7cb731118443a2ad1ad547ec5ba, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6264497245044881191, guid: 5233b7cb731118443a2ad1ad547ec5ba, type: 3}
       propertyPath: m_LocalScale.x
@@ -37726,6 +37863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_outer_left_5
       objectReference: {fileID: 0}
+    - target: {fileID: 6242901239657641963, guid: f2b9cbb85d2db8345820e7d7bd79235f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37801,6 +37942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_standard_7x7
       objectReference: {fileID: 0}
+    - target: {fileID: 6213067026533352822, guid: 994a03fa13b5dd74bb3d67b0346735f4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37817,6 +37962,10 @@ PrefabInstance:
     - target: {fileID: 934895565995136625, guid: 30bb0283e45c71741a3565f3e3f57f0a, type: 3}
       propertyPath: m_Name
       value: island_floor_outer_left_7
+      objectReference: {fileID: 0}
+    - target: {fileID: 934895565995136625, guid: 30bb0283e45c71741a3565f3e3f57f0a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2947095130219519736, guid: 30bb0283e45c71741a3565f3e3f57f0a, type: 3}
       propertyPath: m_LocalScale.x
@@ -38000,6 +38149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_outer_right_5
       objectReference: {fileID: 0}
+    - target: {fileID: 4011440977471905378, guid: c88ddc24b64c2f342ae4dfe5bc59000c, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38064,6 +38217,10 @@ PrefabInstance:
     - target: {fileID: 1932868852868262601, guid: 18c3e7af128a050478bb854163653980, type: 3}
       propertyPath: m_Name
       value: island_floor_standard_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932868852868262601, guid: 18c3e7af128a050478bb854163653980, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38138,6 +38295,10 @@ PrefabInstance:
     - target: {fileID: 6928555863991746320, guid: 9439d5bc06f59f1478d78c05bc3b1e2e, type: 3}
       propertyPath: m_Name
       value: island_floor_side_down_7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928555863991746320, guid: 9439d5bc06f59f1478d78c05bc3b1e2e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38300,6 +38461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_floor_outer_right_7
       objectReference: {fileID: 0}
+    - target: {fileID: 8263239255757190237, guid: 607d8857bb68533419dea5c0a5a8f567, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 9180258143979339634, guid: 607d8857bb68533419dea5c0a5a8f567, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.11111112
@@ -38364,6 +38529,10 @@ PrefabInstance:
     - target: {fileID: 4040372612445636866, guid: b6e7e7f9aca1c0d4cbad77d2fc48331d, type: 3}
       propertyPath: m_Name
       value: island_floor_side_down_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040372612445636866, guid: b6e7e7f9aca1c0d4cbad77d2fc48331d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7363103407596578877, guid: b6e7e7f9aca1c0d4cbad77d2fc48331d, type: 3}
       propertyPath: m_LocalScale.x

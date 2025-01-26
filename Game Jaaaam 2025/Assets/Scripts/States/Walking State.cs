@@ -2,6 +2,9 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
+using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class WalkingState : BaseState
 {
@@ -12,11 +15,13 @@ public class WalkingState : BaseState
     Rigidbody rb;
     InputAction moveAction;
 
-    Animator animator;
     int direction = 2;
     private int lastDirection = 2;
     public static Vector2 playerDirection;
-
+    private S_MapToIsland mapToIsland;
+    private RuntimeAnimatorController mapAnimator;
+    private RuntimeAnimatorController islandAnimator;
+    private Animator spriteAnimator;
     private bool canMove = true;
 
     public void DisableMovement()
@@ -39,9 +44,11 @@ public class WalkingState : BaseState
         moveAction = InputSystem.actions.FindAction("Move");
         rb = stateMachine.gameObject.GetComponent<Rigidbody>();
 
-        GameObject player = stateMachine.gameObject;
-        GameObject child = player.transform.GetChild(0).gameObject;
-        animator = child.GetComponent<Animator>();
+        mapToIsland = Resources.Load<S_MapToIsland>("Scriptable Objects/S_MapToIsland");
+        mapAnimator = mapToIsland.mapAnimator;
+        islandAnimator = mapToIsland.islandAnimator;
+
+        spriteAnimator = stateMachine.gameObject.GetComponentInChildren<Animator>();
     }
 
     public void UpdateState()
@@ -59,14 +66,21 @@ public class WalkingState : BaseState
             DetermineDirection(move);
         }
 
-        animator.SetBool("change direction", false);
-
-        if (direction != lastDirection)
+        if (spriteAnimator.runtimeAnimatorController == islandAnimator)
         {
-            lastDirection = direction;
+            spriteAnimator.SetBool("change direction", false);
 
-            animator.SetInteger("walking animation", direction);
-            animator.SetBool("change direction", true);
+            if (direction != lastDirection)
+            {
+                lastDirection = direction;
+
+                spriteAnimator.SetInteger("walking animation", direction);
+                spriteAnimator.SetBool("change direction", true);
+            }
+        }
+        if (spriteAnimator.runtimeAnimatorController == mapAnimator)
+        {
+
         }
     }
 
@@ -110,7 +124,14 @@ public class WalkingState : BaseState
 
     public void Exit()
     {
-        animator.SetBool("exit", true);
+        if (spriteAnimator.runtimeAnimatorController == islandAnimator)
+        {
+            spriteAnimator.SetBool("exit", true);
+        }
+        if (spriteAnimator.runtimeAnimatorController == mapAnimator)
+        {
+
+        }
     }
 
     public StateType GetStateType()
